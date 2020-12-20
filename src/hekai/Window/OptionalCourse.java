@@ -1,6 +1,6 @@
 package hekai.Window;
 
-import hekai.Tables.OptionalCourseList;
+import hekai.Tables.CourseList;
 import hekai.model.Course;
 import hekai.sql.AdminDBCon;
 
@@ -11,7 +11,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.function.Predicate;
 
 public class OptionalCourse extends JPanel {
     JLabel title=new JLabel("选课",JLabel.CENTER);
@@ -22,8 +21,10 @@ public class OptionalCourse extends JPanel {
     public OptionalCourse(String id,JMenuItem item){
         title.setFont(new Font("",Font.BOLD,20));
         setLayout(new BorderLayout());
-        OptionalCourseList optionalCourseList=new OptionalCourseList();
-        List<Course> list=optionalCourseList.CourseRes(id);
+        /*OptionalCourseList optionalCourseList=new OptionalCourseList();
+        List<Course> list=optionalCourseList.CourseRes(id);*/
+        CourseList courseList=new CourseList();
+        List<Course> list=courseList.CourseRes(true,id);
         String[] name={"课程号","课程名","任课教师","学分","学时"};
         Object[][] res=new Object[list.size()][name.length];
         for(int i=0;i<list.size();i++){

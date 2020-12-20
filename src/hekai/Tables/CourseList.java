@@ -14,6 +14,21 @@ public class CourseList {
     public List<Course> CourseRes(){
         Connection con= AdminDBCon.getConnection();
         String s= "select * from test.Course";
+        return getCourses(con, s);
+    }
+    public List<Course> CourseRes(boolean res,String id){
+        Connection con= AdminDBCon.getConnection();
+        String s;
+        if(res) {
+             s= "select * from test.Course where Cno not in (select test.grade.Cno from test.grade where Sno=" + id + ")";
+        }
+        else{
+            s="select * from test.Course where Cno in (select test.grade.Cno from test.grade where Sno=" + id +")";
+        }
+        return getCourses(con, s);
+    }
+
+    static List<Course> getCourses(Connection con, String s) {
         List<Course> courses= new ArrayList<>();
         try{
             PreparedStatement preparedStatement = con.prepareStatement(s);

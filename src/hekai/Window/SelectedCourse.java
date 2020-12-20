@@ -1,5 +1,6 @@
 package hekai.Window;
 
+import hekai.Tables.CourseList;
 import hekai.Tables.OptionalCourseList;
 import hekai.model.Course;
 import hekai.sql.AdminDBCon;
@@ -21,8 +22,10 @@ public class SelectedCourse extends JPanel{
     public SelectedCourse(String id, JMenuItem item){
         title.setFont(new Font("",Font.BOLD,20));
         setLayout(new BorderLayout());
-        OptionalCourseList optionalCourseList=new OptionalCourseList();
-        List<Course> list=optionalCourseList.CourseRes(id);
+        /*OptionalCourseList optionalCourseList=new OptionalCourseList();
+        List<Course> list=optionalCourseList.CourseRes(id);*/
+        CourseList courseList=new CourseList();
+        List<Course> list=courseList.CourseRes(false,id);
         String[] name={"课程号","课程名","任课教师","学分","学时"};
         Object[][] res=new Object[list.size()][name.length];
         for(int i=0;i<list.size();i++){
