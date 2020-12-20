@@ -30,7 +30,7 @@ public class Login {
             String pas=new String(passwordTextField.getPassword());
             StudentUP studentUP =new StudentUP();
             switch (studentUP.verifyUserPassword(1,userTextField.getText(),pas)) {
-                case 1 -> TeacherSuccess();
+                case 1 -> TeacherSuccess(userTextField.getText());
                 case 2 -> PasswordFail();
                 case 3 -> UserFail();
             }
@@ -60,10 +60,10 @@ public class Login {
         frame.dispose();
         new StudentFrame(id);
     }
-    private void TeacherSuccess(){
+    private void TeacherSuccess(String id){
         JOptionPane.showMessageDialog(frame,"登陆成功","提示",JOptionPane.PLAIN_MESSAGE);
         frame.dispose();
-        new TeacherFrame();
+        new TeacherFrame(id);
     }
     private void PasswordFail(){
         JOptionPane.showMessageDialog(frame,"登录失败,\n请检查密码。","密码错误", JOptionPane.PLAIN_MESSAGE);
