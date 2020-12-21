@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 public class Login {
     private final JFrame frame=new JFrame("登录");
-    private final JLabel title=new JLabel("信息管理系统",JLabel.CENTER);
+    private final JLabel title=new JLabel("教务系统",JLabel.CENTER);
     private final JLabel userLabel=new JLabel("用户名：",JLabel.RIGHT);
     private final JLabel passwordLabel=new JLabel("密码：",JLabel.RIGHT);
     private final JTextField userTextField=new JTextField(20);

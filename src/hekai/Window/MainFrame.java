@@ -1,12 +1,10 @@
 package hekai.Window;
 
-import com.mysql.cj.log.Log;
-
 import javax.swing.*;
 import java.awt.*;
 
 public class MainFrame{
-    JFrame frame=new JFrame("学生管理系统");
+    JFrame frame=new JFrame("教务系统");
     JMenuBar jMenuBar=new JMenuBar();
     JMenu filemenu=new JMenu("文件");
     JMenuItem saveasItem=new JMenuItem("另存为");
