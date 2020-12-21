@@ -1,7 +1,6 @@
 package hekai.Tables;
 
 import hekai.model.Student;
-import hekai.model.Student_info;
 import hekai.sql.AdminDBCon;
 
 import java.sql.Connection;

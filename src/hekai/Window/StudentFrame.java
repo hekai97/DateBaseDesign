@@ -41,7 +41,7 @@ public class StudentFrame extends MainFrame{
         frame.setVisible(true);
     }
     public void showGrade(String id){
-        frame.setContentPane(new StudentGrade(id,item3));
+        frame.setContentPane(new StudentGrade(id));
         frame.setVisible(true);
     }
     public void showInformation(String id){
