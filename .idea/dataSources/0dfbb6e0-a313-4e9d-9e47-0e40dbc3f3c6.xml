@@ -4523,6 +4523,8 @@ SELECT|sys.sys_config
       <ColNames>Ctno</ColNames>
       <RefTableName>teacher</RefTableName>
       <RefColNames>Tno</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="1108" parent="364" name="Fno">
       <Position>1</Position>

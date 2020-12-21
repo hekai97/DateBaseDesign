@@ -81,7 +81,7 @@ public class Login {
         setPanel();
         frame.add(panel);
         frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
     private void setPanel(){
         panel.setLayout(null);

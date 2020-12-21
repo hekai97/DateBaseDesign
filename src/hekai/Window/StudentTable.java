@@ -72,9 +72,7 @@ public class StudentTable extends JPanel {
                 }
             }
         });
-        newRowbutton.addActionListener(e->{
-            defaultTableModel.addRow(new Vector<>());
-        });
+        newRowbutton.addActionListener(e-> defaultTableModel.addRow(new Vector<>()));
         /*inseretTopbutton.addActionListener(e -> {
             try {
                 defaultTableModel.insertRow(jTable.getSelectedRow(), new Object[]{});

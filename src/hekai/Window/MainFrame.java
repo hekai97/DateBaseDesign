@@ -1,5 +1,7 @@
 package hekai.Window;
 
+import com.mysql.cj.log.Log;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -27,7 +29,11 @@ public class MainFrame{
         jMenuBar.add(helpmenu);
         filemenu.add(saveasItem);
         filemenu.add(exitItem);
-        exitItem.addActionListener(e-> System.exit(0));
+        exitItem.addActionListener(e-> {
+            frame.dispose();
+            Login login=new Login();
+            login.CreateWindow();
+        });
         //Operatemenu.add(IncreaseItem);
         //Operatemenu.add(DeleteItem);
         //Operatemenu.add(UpdateItem);
@@ -35,7 +41,7 @@ public class MainFrame{
         helpmenu.add(chatItem);
         helpmenu.add(descriptionItem);
         frame.setJMenuBar(jMenuBar);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
     }
 
