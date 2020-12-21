@@ -11,14 +11,14 @@ public class TeacherFrame extends MainFrame{
         Inquire.add(item1);
         ActionListener actionListener= e -> {
             if(e.getSource()==item1){
-                showGradeTable();
+                showGradeTable(id);
             }
             if(e.getSource()==item2){
 
             }
         };
     }
-    private void showGradeTable(){
+    private void showGradeTable(String id){
 
     }
     public static void main(String[] args) {

@@ -34,7 +34,7 @@ public class GradeTable extends JPanel {
         for(int i=0;i<list.size();i++){
             Grade grade1=list.get(i);
             res[i][0]=grade1.getSno();
-            res[i][1]=grade1.getCon();
+            res[i][1]=grade1.getCno();
             res[i][2]=grade1.getGrade();
         }
         defaultTableModel=new DefaultTableModel(res,name);

@@ -20,10 +20,14 @@ public class CourseList {
         Connection con= AdminDBCon.getConnection();
         String s;
         if(res) {
-             s= "select * from test.Course where Cno not in (select test.grade.Cno from test.grade where Sno=" + id + ")";
+             s= "select Cno,Cname,Tname,Ccredit,Ctime from test.Course,test.teacher"
+                     + " where Cno not in (select test.grade.Cno from test.grade where Sno="+id
+                     + ") AND course.Ctno =teacher.Tno" ;
         }
         else{
-            s="select * from test.Course where Cno in (select test.grade.Cno from test.grade where Sno=" + id +")";
+            s="select Cno,Cname,Tname,Ccredit,Ctime from test.Course,test.teacher"
+                    + " where Cno in (select test.grade.Cno from test.grade where Sno="+id
+                    + ") AND course.Ctno =teacher.Tno" ;
         }
         return getCourses(con, s);
     }
@@ -38,7 +42,7 @@ public class CourseList {
                 Course course = new Course();
                 course.setCno(st.getString("Cno"));
                 course.setCname(st.getString("Cname"));
-                course.setCtno(st.getString("Ctno"));
+                course.setCtno(st.getString("Tname"));
                 course.setCcredit(st.getString("Ccredit"));
                 course.setCtime(st.getString("Ctime"));
                 courses.add(course);

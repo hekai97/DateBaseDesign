@@ -2,7 +2,7 @@ package hekai.model;
 
 public class Grade {
     private String Sno;
-    private String Con;
+    private String Cno;
     private String grade;
 
     public String getSno() {
@@ -13,12 +13,12 @@ public class Grade {
         Sno = sno;
     }
 
-    public String getCon() {
-        return Con;
+    public String getCno() {
+        return Cno;
     }
 
-    public void setCon(String con) {
-        Con = con;
+    public void setCno(String con) {
+        Cno = con;
     }
 
     public String getGrade() {
