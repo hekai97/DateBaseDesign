@@ -15,7 +15,17 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 import java.util.Vector;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：TeacherTable.java
+ * 文件标识：无
+ * 内容摘要：该类从教师表中得到数据，然后将其以表格的形式展示在管理员的窗口上
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class TeacherTable extends JPanel {
     JLabel title=new JLabel("教师信息表",JLabel.CENTER);
     JTable jTable;

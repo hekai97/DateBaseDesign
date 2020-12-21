@@ -2,7 +2,17 @@ package hekai.Window;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：StudentFrame.java
+ * 文件标识：无
+ * 内容摘要：这是学生登陆后开启的主窗口
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class StudentFrame extends MainFrame{
     JMenuItem item1=new JMenuItem("查询可选课程");
     JMenuItem item2=new JMenuItem("查询已选课程");

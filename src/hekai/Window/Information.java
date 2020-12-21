@@ -9,7 +9,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：Information.java
+ * 文件标识：无
+ * 内容摘要：该类单独显示学生的详细信息
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class Information extends JPanel{
     JLabel spaceLabel=new JLabel("    ");
     JLabel snoLabel;

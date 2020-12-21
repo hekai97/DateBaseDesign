@@ -15,7 +15,7 @@ import java.security.NoSuchAlgorithmException;
  * 确保了密码的安全性
  * 当前版本： V1.0
  * 作   者：贺凯
- * 完成日期： 20201115
+ * 完成日期： 20201215
  **********************************************************/
 public class MD5encryption {
     public String MD5encrypt(String s)

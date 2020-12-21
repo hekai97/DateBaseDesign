@@ -9,7 +9,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：GradeList.java
+ * 文件标识：无
+ * 内容摘要：该类根据不同的用户从数据库中筛选出不同的成绩值，然后将其返回
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class GradeList {
     //返回表的完整结构
     public List<Grade> GradeRes(){

@@ -2,7 +2,17 @@ package hekai.Window;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：AdminFrame.java
+ * 文件标识：无
+ * 内容摘要：这个类所实现的界面是管理员登入时候的界面
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class AdminFrame extends MainFrame{
     JMenuItem faculty=new JMenuItem("学院");
     JMenuItem course=new JMenuItem("课程");

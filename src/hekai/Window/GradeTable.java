@@ -15,7 +15,17 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 import java.util.Vector;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：GradeTable.java
+ * 文件标识：无
+ * 内容摘要：该类从成绩表中得到数据，然后将其以表格的形式展示在窗口上
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class GradeTable extends JPanel {
     JLabel title=new JLabel("学生成绩表",JLabel.CENTER);
     JTable jTable;

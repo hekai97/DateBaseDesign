@@ -3,7 +3,17 @@ package hekai.sql;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：TeacherDBCon.java
+ * 文件标识：无
+ * 内容摘要：该类实现了teacher用户数据库的连接
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class TeacherDBCon {
     private static final String driver="com.mysql.cj.jdbc.Driver";
     //定义常量数据库的url

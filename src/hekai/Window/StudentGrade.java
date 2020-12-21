@@ -11,7 +11,18 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：StudentGrade.java
+ * 文件标识：无
+ * 内容摘要：该类根据老师和学生的身份，分别返回不同的成绩表
+ * 在学生窗口中显示的是课程名加成绩，在教师窗口中显示的是学生名加窗口
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class StudentGrade extends JPanel {
     JLabel title=new JLabel("所选课程成绩",JLabel.CENTER);
     DefaultTableModel dtm;
@@ -59,7 +70,8 @@ public class StudentGrade extends JPanel {
         AddToSouth(res,item,id);
     }
     private void AddToSouth(Object[][] res,JMenuItem item,String id){
-        Connection con= AdminDBCon.getConnection();updatebutton.addActionListener(e -> {
+        Connection con= AdminDBCon.getConnection();
+        updatebutton.addActionListener(e -> {
             String sql="update test.grade set "
                     +"grade='"+dtm.getValueAt(table.getSelectedRow(),1)+"' "
                     +"where Sno=(select Sno from test.student where Sname='"+res[table.getSelectedRow()][0]+"')"

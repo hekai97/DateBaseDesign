@@ -5,7 +5,17 @@ import hekai.verify.StudentUP;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：Login.java
+ * 文件标识：无
+ * 内容摘要：登录的主界面，程序的入口位置，该界面为程序调用的第一个界面
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class Login {
     private final JFrame frame=new JFrame("登录");
     private final JLabel title=new JLabel("教务系统",JLabel.CENTER);

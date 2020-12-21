@@ -1,7 +1,6 @@
 package hekai.Window;
 
 import hekai.Tables.CourseList;
-import hekai.Tables.OptionalCourseList;
 import hekai.model.Course;
 import hekai.sql.AdminDBCon;
 
@@ -12,7 +11,17 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：SelectedCourse.java
+ * 文件标识：无
+ * 内容摘要：该类得到学生选择过的课程，然后将其以表格形式展示在窗口上
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class SelectedCourse extends JPanel{
     JLabel title=new JLabel("所选课程",JLabel.CENTER);
     DefaultTableModel dtm;

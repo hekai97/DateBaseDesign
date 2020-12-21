@@ -12,13 +12,13 @@ import java.util.List;
 /***********************************************************
  * 版权所有 (C)2020, hekai
  *
- * 文件名称：StudentList.java
+ * 文件名称：StudentInfoList.java
  * 文件标识：无
  * 内容摘要：该类得到数据库中的学生信息，并且将其放在ArrayList中返回
  * 其它说明：无
  * 当前版本： V1.0
  * 作   者：贺凯
- * 完成日期： 20201115
+ * 完成日期： 20201215
  **********************************************************/
 public class StudentInfoList {
     public List<Student_info> StudentRes(){

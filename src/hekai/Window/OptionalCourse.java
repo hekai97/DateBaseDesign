@@ -11,7 +11,17 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
-
+/***********************************************************
+ * 版权所有 (C)2020, hekai
+ *
+ * 文件名称：OptionalCourse.java
+ * 文件标识：无
+ * 内容摘要：在学生窗口上显示学生可选的课程
+ * 其它说明：无
+ * 当前版本： V1.0
+ * 作   者：贺凯
+ * 完成日期： 20201215
+ **********************************************************/
 public class OptionalCourse extends JPanel {
     JLabel title=new JLabel("选课",JLabel.CENTER);
     DefaultTableModel dtm;
