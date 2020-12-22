@@ -24,7 +24,25 @@ public class CourseList {
     public List<Course> CourseRes(){
         Connection con= AdminDBCon.getConnection();
         String s= "select * from test.Course";
-        return getCourses(con, s);
+        List<Course> courses= new ArrayList<>();
+        try{
+            PreparedStatement preparedStatement = con.prepareStatement(s);
+            preparedStatement.execute();
+            ResultSet st = preparedStatement.executeQuery();
+            while (st.next()) {
+                Course course = new Course();
+                course.setCno(st.getString("Cno"));
+                course.setCname(st.getString("Cname"));
+                course.setCtno(st.getString("Ctno"));
+                course.setCcredit(st.getString("Ccredit"));
+                course.setCtime(st.getString("Ctime"));
+                courses.add(course);
+            }
+        }catch(SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return courses;
     }
     public List<Course> CourseRes(boolean res,String id){
         Connection con= AdminDBCon.getConnection();

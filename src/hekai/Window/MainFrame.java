@@ -17,37 +17,34 @@ public class MainFrame{
     JFrame frame=new JFrame("教务系统");
     JMenuBar jMenuBar=new JMenuBar();
     JMenu filemenu=new JMenu("文件");
-    JMenuItem saveasItem=new JMenuItem("另存为");
+    //JMenuItem saveasItem=new JMenuItem("另存为");
+    JMenuItem loginItem=new JMenuItem("返回登录界面");
     JMenuItem exitItem=new JMenuItem("退出");
-    //JMenu Operatemenu=new JMenu("操作");
-    //JMenuItem IncreaseItem=new JMenuItem("添加");
-    //JMenuItem DeleteItem=new JMenuItem("删除");
-    //JMenuItem UpdateItem=new JMenuItem("更改");
     JMenu Inquire=new JMenu("查询");
-    JMenu helpmenu=new JMenu("帮助");
-    JMenuItem chatItem=new JMenuItem("反馈");
-    JMenuItem descriptionItem=new JMenuItem("说明");
+    //JMenu helpmenu=new JMenu("帮助");
+    //JMenuItem chatItem=new JMenuItem("反馈");
+    //JMenuItem descriptionItem=new JMenuItem("说明");
     public MainFrame(){
         frame.setSize(1000,800);
         frame.setLayout(new BorderLayout());
         frame.setLocationRelativeTo(null);
         jMenuBar.add(filemenu);
-        //jMenuBar.add(Operatemenu);
         jMenuBar.add(Inquire);
-        jMenuBar.add(helpmenu);
-        filemenu.add(saveasItem);
+        //jMenuBar.add(helpmenu);
+        filemenu.add(loginItem);
         filemenu.add(exitItem);
-        exitItem.addActionListener(e-> {
+        loginItem.addActionListener(e->{
             frame.dispose();
             Login login=new Login();
             login.CreateWindow();
         });
-        //Operatemenu.add(IncreaseItem);
-        //Operatemenu.add(DeleteItem);
-        //Operatemenu.add(UpdateItem);
-        //Operatemenu.add(Inquire);
-        helpmenu.add(chatItem);
-        helpmenu.add(descriptionItem);
+        exitItem.addActionListener(e-> System.exit(0));
+        //helpmenu.add(chatItem);
+        /*chatItem.addActionListener(e->{
+            Chat chat=new Chat();
+            chat.startUp();
+        });*/
+        //helpmenu.add(descriptionItem);
         frame.setJMenuBar(jMenuBar);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
